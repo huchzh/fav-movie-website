@@ -1,9 +1,15 @@
 require('dotenv').config();
 const express = require('express');
 const connectDB = require('./config/db');
+const movieRoutes = require('./routes/movieRoutes');
+
+connectDB();
 
 const app = express();
-connectDB();
+
+app.use(express.json());
+
+app.use('/api/movies', movieRoutes);
 
 const PORT = process.env.PORT || 5000;
 
