@@ -8,14 +8,14 @@ const {
 
 /*
 @desc   GET all movies from db
-@route  GET /api/products
+@route  GET /api/movies
 @access GET Public
 */
 router.get('/', getAllMovies);
 
 /*
 @desc   GET a movie from db
-@route  GET /api/products/:id
+@route  GET /api/movies/:id
 @access GET Public
 */
 router.get('/:id', getProductById);

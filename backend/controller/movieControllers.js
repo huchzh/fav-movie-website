@@ -6,9 +6,9 @@ const getAllMovies = async (req, res) => {
         res.json(movies);
     } catch (error) {
         console.error(error);
-        res.status(500).json({message: "Server Error"});
+        res.status(500).json({ message: "Server Error" });
     }
-}
+};
 
 const getProductById = async (req, res) => {
     try {
@@ -16,11 +16,11 @@ const getProductById = async (req, res) => {
         res.json(movie);
     } catch (error) {
         console.error(error);
-        res.status(500).json({message: "Server Error"});
+        res.status(500).json({ message: "Server Error" });
     }
-}
+};
 
 module.exports = {
     getAllMovies,
     getProductById
-}
+};
